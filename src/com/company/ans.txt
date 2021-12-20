@@ -1,0 +1,53 @@
+$$BLIND 75$$
+
+____ARRAYS____
+
+--Two Sum--
+
+sol1 - Brute Force 2 pointer solution
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] ans = new int[2];
+        for(int i = 0; i < nums.length; i++) {
+            int curr1 = nums[i];
+            for(int j = i+1; j < nums.length; j++) {
+                int curr2 = nums[j];
+                if(curr1 + curr2 == target) {
+
+                    ans[0] = i;
+                    ans[1] = j;
+                    return ans;
+                }
+            }
+        }
+        return ans;
+    }
+}
+
+TODO sol2 - hashmap
+
+
+--Best Time to Buy and Sell Stock--
+
+TODO sol1 - Brute Force
+
+
+sol2 - I don't know
+public class Solution {
+    public int maxProfit(int[] prices) {
+        int ans=0;
+        if(prices.length==0){
+            return ans;
+        }
+        int bought=prices[0];
+        for(int i=1;i<prices.length;i++){
+            if(prices[i]>bought){
+                if(ans<(prices[i]-bought)){
+                    ans=prices[i]-bought;
+                }
+            }
+            else{bought=prices[i];}
+        }
+        return ans;
+    }
+}
