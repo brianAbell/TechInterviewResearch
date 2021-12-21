@@ -1,10 +1,11 @@
 $$BLIND 75$$
 
-____ARRAYS____
+________________________________ARRAYS________________________________
+______________________________________________________________________
 
---Two Sum--
+--------------1. Two Sum (Easy)--------------
 
-sol1 - Brute Force 2 pointer solution
+sol1 - Brute Force 2 pointer solution--------------
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] ans = new int[2];
@@ -23,31 +24,114 @@ class Solution {
         return ans;
     }
 }
+TIME: TODO
+SPACE: TODO
 
-TODO sol2 - hashmap
+TODO sol2 - hashmap--------------
+TIME: TODO
+SPACE: TODO
 
+--------------121. Best Time to Buy and Sell Stock (Easy)--------------
 
---Best Time to Buy and Sell Stock--
+TODO sol1 - Brute Force--------------
+TIME: TODO
+SPACE: TODO
 
-TODO sol1 - Brute Force
-
-
-sol2 - I don't know
+sol2 - Two pointer efficient--------------
 public class Solution {
     public int maxProfit(int[] prices) {
-        int ans=0;
+        int maxProfit=0;
         if(prices.length==0){
-            return ans;
+            return maxProfit;
         }
         int bought=prices[0];
         for(int i=1;i<prices.length;i++){
             if(prices[i]>bought){
-                if(ans<(prices[i]-bought)){
-                    ans=prices[i]-bought;
+                if(maxProfit<(prices[i]-bought)){
+                    maxProfit=prices[i]-bought;
                 }
             }
             else{bought=prices[i];}
         }
-        return ans;
+        return maxProfit;
     }
 }
+TIME: TODO
+SPACE: TODO
+
+--------------217. Contains Duplicate (Easy)--------------
+
+sol1 - Brute Force - linear search took to long though--------------
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        int count = 0;
+
+        for(int i = 0; i < nums.length - 1; i++) {
+             for(int j = i + 1; j < nums.length; j++) {
+                 if(nums[i] == nums[j]) {
+                     return true;
+                 }
+             }
+        }
+        return false;
+    }
+}
+TIME: O(n^2)
+SPACE: TODO
+
+sol2 - Hashsets--------------
+class Solution {
+    public  boolean containsDuplicate(int[] nums) {
+		 Set<Integer> set = new HashSet<Integer>();
+		 for(int i : nums)
+			 if(!set.add(i))// if there is same
+				 return true;
+		 return false;
+	 }
+}
+TIME: O(n)
+SPACE: O(n)
+
+TODO sol3 - idk yet
+
+
+--------------238: Product of Array Except Self (Medium)--------------
+
+
+
+
+______________________________________________________________________
+______________________________________________________________________
+
+
+________________________________BINARY________________________________
+______________________________________________________________________
+--------------371. Sum of Two Integers (Medium)--------------
+TODO
+
+--------------191. Number of 1 Bits (Easy)--------------
+sol1 - Brute Force--------------
+
+
+TIME: TODO
+SPACE: TODO
+
+
+
+______________________________________________________________________
+______________________________________________________________________
+
+
+________________________________DYNAMIC PROGRAMMING________________________________
+___________________________________________________________________________________
+
+--------------70: Climbing Stairs (Easy)--------------
+sol1 - Brute Force--------------
+
+
+TIME: TODO
+SPACE: TODO
+
+
+___________________________________________________________________________________
+___________________________________________________________________________________
