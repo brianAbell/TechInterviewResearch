@@ -133,5 +133,29 @@ TIME: TODO
 SPACE: TODO
 
 
+sol2 - Fastest time commplexity, bad space complexity tho----------------
+class Solution {
+    public int climbStairs(int n) {
+        //base cases
+        if(n == 1) return 1;
+        if(n == 2) return 2;
+
+        //rest
+        int a = 1;
+        int b = 2;
+        int ways = 0;
+
+        for(int i = 2; i < n; i++) {
+            ways = a + b;
+            a = b;
+            b = ways;
+        }
+        return ways;
+    }
+}
+
+TIME: TODO
+SPACE: TODO
+
 ___________________________________________________________________________________
 ___________________________________________________________________________________

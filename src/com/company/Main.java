@@ -33,7 +33,7 @@ public class Main {
 
 
     /*ARRAY ADT*/
-//    public static void array() {
-//
-//    }
+    public static void array() {
+
+    }
 }
