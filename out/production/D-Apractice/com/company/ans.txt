@@ -1,0 +1,73 @@
+$$BLIND 75$$
+
+____ARRAYS____
+
+--Two Sum--
+
+sol1 - Brute Force 2 pointer solution
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] ans = new int[2];
+        for(int i = 0; i < nums.length; i++) {
+            int curr1 = nums[i];
+            for(int j = i+1; j < nums.length; j++) {
+                int curr2 = nums[j];
+                if(curr1 + curr2 == target) {
+
+                    ans[0] = i;
+                    ans[1] = j;
+                    return ans;
+                }
+            }
+        }
+        return ans;
+    }
+}
+
+TODO sol2 - hashmap
+
+
+--Best Time to Buy and Sell Stock--
+
+TODO sol1 - Brute Force
+
+
+sol2 - Two pointer efficient
+public class Solution {
+    public int maxProfit(int[] prices) {
+        int maxProfit=0;
+        if(prices.length==0){
+            return maxProfit;
+        }
+        int bought=prices[0];
+        for(int i=1;i<prices.length;i++){
+            if(prices[i]>bought){
+                if(maxProfit<(prices[i]-bought)){
+                    maxProfit=prices[i]-bought;
+                }
+            }
+            else{bought=prices[i];}
+        }
+        return maxProfit;
+    }
+}
+
+--Contains Duplicate--
+
+sol1 - Brute Force - linear search took to long though
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        int count = 0;
+
+        for(int i = 0; i < nums.length - 1; i++) {
+             for(int j = i + 1; j < nums.length; j++) {
+                 if(nums[i] == nums[j]) {
+                     return true;
+                 }
+             }
+        }
+        return false;
+    }
+}
+
+TODO sol2 - Hashset using HashTables
