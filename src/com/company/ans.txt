@@ -133,27 +133,37 @@ TIME: TODO
 SPACE: TODO
 
 
-sol2 - Fastest time commplexity, bad space complexity tho----------------
-class Solution {
-    public int climbStairs(int n) {
-        //base cases
-        if(n == 1) return 1;
-        if(n == 2) return 2;
+sol2 - The Fastest time complexity, not using array----------------
+public int climbStairs(int n) {
+    //base cases
+    if(n == 1) return 1;
+    if(n == 2) return 2;
 
-        //rest
-        int a = 1;
-        int b = 2;
-        int ways = 0;
+    //rest
+    int a = 1;
+    int b = 2;
+    int ways = 0;
 
-        for(int i = 2; i < n; i++) {
-            ways = a + b;
-            a = b;
-            b = ways;
-        }
-        return ways;
+    for(int i = 2; i < n; i++) {
+        ways = a + b;
+        a = b;
+        b = ways;
     }
+    return ways;
 }
+TIME: TODO
+SPACE: TODO
 
+sol3 - The Fastest time complexity, using array---------
+public int climbStairs(int n) {
+        int[] dp = new int[n+1];
+        dp[0]=1;
+        dp[1]=1;
+        for(int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
+}
 TIME: TODO
 SPACE: TODO
 
