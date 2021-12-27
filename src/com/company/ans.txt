@@ -189,8 +189,40 @@ ________________________________Linked List________________________________
 ___________________________________________________________________________
 
 --------------206: Reverse Linked List (Easy)--------------
-sol1 - Brute Force--------------
+sol1 - Brute Force, iterative--------------
+NOTE: singly linked lists prevent traversing backwards so our solution requires us to keep track of the prev node.
 
+public ListNode reverseList(ListNode head) {
+        ListNode prev = null; //init pointer
+        ListNode next = null; //init pointer
 
+        while(head != null) {
+            next = head.next; //save next
+            head.next = prev; //reverse
+            prev = head; //advance prev & head
+            head = next; //advance prev & head
+        }
+        return prev; //new head at end
+}
+TIME: O(n)
+SPACE: O(1) / O(n)
+
+sol2 - Recursive--------------
+
+// 1 -> 2 -> 3
+// 3 -> 2 -> 1
+
+public ListNode reverseList(ListNode head) {
+    return reverseListInt(head, null);
+}
+
+public ListNode reverseListInt(ListNode head, ListNode newHead) {
+    if(head == null) {return newHead;}
+    ListNode next = head.next;
+    head.next = newHead;
+    return reverseListInt(next, head);
+}
+TIME: O(n)
+SPACE: O(n)
 ___________________________________________________________________________________
 ___________________________________________________________________________________
