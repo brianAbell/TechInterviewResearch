@@ -27,7 +27,7 @@ class Solution {
 TIME: O(n^2)
 SPACE: TODO
 
-TODO sol2 - hashmap--------------
+sol2 - hashmap--------------
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> visitedNumbers = new HashMap<>();
