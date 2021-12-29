@@ -24,11 +24,25 @@ class Solution {
         return ans;
     }
 }
-TIME: TODO
+TIME: O(n^2)
 SPACE: TODO
 
 TODO sol2 - hashmap--------------
-TIME: TODO
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> visitedNumbers = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            // x + y = target
+            int delta = target - nums[i];
+            if(visitedNumbers.containsKey(delta)) {
+                return new int[] {i, visitedNumbers.get(delta)};
+            }
+            visitedNumbers.put(nums[i], i);
+        }
+        return new int[] {-1, -1};
+    }
+}
+TIME: O(n)
 SPACE: TODO
 
 --------------121. Best Time to Buy and Sell Stock (Easy)--------------
@@ -224,5 +238,16 @@ public ListNode reverseListInt(ListNode head, ListNode newHead) {
 }
 TIME: O(n)
 SPACE: O(n)
+
+--------------141: Linked List Cycle (Easy)--------------
+sol1 - Brute Force, iterative--------------
+
+TIME: TODO
+SPACE: TODO
+
+sol2 - Recursive--------------
+
+TIME: TODO
+SPACE: TODO
 ___________________________________________________________________________________
 ___________________________________________________________________________________
