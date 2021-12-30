@@ -47,7 +47,7 @@ SPACE: TODO
 
 --------------121. Best Time to Buy and Sell Stock (Easy)--------------
 
-TODO sol1 - Brute Force--------------
+sol1 - Brute Force--------------
 public class Solution {
     public int maxProfit(int prices[]) {
         int max = 0;
@@ -124,9 +124,22 @@ class Solution {
     }
 }
 TIME: O(n^2)
-SPACE: TODO
+SPACE: O(1)
 
-sol2 - Hashsets--------------
+sol2 - Slightly better--------------
+class Solution {
+    Arrays.sort(nums);
+    for(int i = 1; i < nums.length; i++) {
+        if(nums[i] == nums[i - 1]) {
+            return true;
+        }
+    }
+    return false;
+}
+TIME: O(nlogn)
+SPACE: O(1)
+
+sol3 - Hashsets--------------
 class Solution {
     public  boolean containsDuplicate(int[] nums) {
 		 Set<Integer> set = new HashSet<Integer>();
