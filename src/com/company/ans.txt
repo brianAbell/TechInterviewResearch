@@ -50,15 +50,15 @@ SPACE: TODO
 TODO sol1 - Brute Force--------------
 public class Solution {
     public int maxProfit(int prices[]) {
-        int maxprofit = 0;
+        int max = 0;
         for (int i = 0; i < prices.length - 1; i++) {
             for (int j = i + 1; j < prices.length; j++) {
                 int profit = prices[j] - prices[i];
-                if (profit > maxprofit)
-                    maxprofit = profit;
+                if (profit > max)
+                    max = profit;
             }
         }
-        return maxprofit;
+        return max;
     }
 }
 TIME: O(n^2)
@@ -87,20 +87,20 @@ SPACE: TODO
 sol3 - Two pointer efficient--------------
 public class Solution {
     public int maxProfit(int[] prices) {
-        int maxProfit=0;
-        if(prices.length==0){
-            return maxProfit;
+        int max = 0;
+        if(prices.length == 0){
+            return max;
         }
-        int bought=prices[0];
-        for(int i=1;i<prices.length;i++){
-            if(prices[i]>bought){
-                if(maxProfit<(prices[i]-bought)){
-                    maxProfit=prices[i]-bought;
+        int min=prices[0];
+        for(int i = 1; i < prices.length; i++){
+            if(prices[i] > min){
+                if(max < (prices[i] - min)){
+                    max=prices[i] - min;
                 }
             }
-            else{bought=prices[i];}
+            else{ min = prices[i]; }
         }
-        return maxProfit;
+        return max;
     }
 }
 TIME: TODO
