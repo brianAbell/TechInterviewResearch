@@ -152,10 +152,53 @@ class Solution {
 TIME: O(n)
 SPACE: O(n)
 
-TODO sol3 - idk yet
+--------------53: Maximum Subarray (Easy)--------------
+sol1 - Brute Force--------------
 
 
+TIME: TODO
+SPACE: TODO
+
+TODO sol2 - Passable solution--------------
+
+
+TIME: TODO
+SPACE: TODO
 --------------238: Product of Array Except Self (Medium)--------------
+
+sol1 - Passable solution--------------
+
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        //validity checker
+        if(nums == null || nums.length == 0) return new int[0];
+
+        int[] result = new int[nums.length];
+
+        //running product
+        int rp = 1;
+
+        //left pass
+        for(int i = 0; i < nums.length; i++) {
+            result[i] = rp;
+            rp = rp * nums[i];
+        }
+
+        //right pass
+        rp = 1;
+
+        for(int i = nums.length - 1; i >= 0; i--) {
+            result[i] = result[i] * rp;
+            rp = rp * nums[i];
+        }
+
+        return result;
+    }
+}
+TIME: O(n) - We traverse through the array twice(left,right) which results in O(2n)==O(n)
+SPACE: O(1) - Result array is only array used for calculations and is the only array returned.
+
+TODO sol2 - Faster solution--------------
 
 
 
