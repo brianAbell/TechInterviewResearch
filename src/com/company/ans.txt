@@ -153,21 +153,48 @@ TIME: O(n)
 SPACE: O(n)
 
 --------------53: Maximum Subarray (Easy)--------------
-sol1 - Brute Force--------------
+TODO sol1 - Brute force--------------
 
+for(i=0...n-1)
+    for(j=i...j)
+        for(k=i...j)
+            compute sum
 
+TIME: O(n^2)
+SPACE: TODO
+
+TODO sol3 - Passable solution--------------
+for(i=0...n-1)
+    for(j=i...n-1)
+        currsum + num[j]
+TIME: O(n^2)
+SPACE: TODO
+
+sol3 - improved-------------- do we actually have to compute EVERY sub array?
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+
+        for(int i = 0; i < nums.length; i++) {
+            sum = sum + nums[i]; // 0 = 0 + 4
+            max = Math.max(sum, max);
+
+            if(sum < 0) {sum = 0;}
+        }
+        return max;
+    }
+}
 TIME: TODO
 SPACE: TODO
 
-TODO sol2 - Passable solution--------------
-
+TODO sol3 - Passable solution--------------
 
 TIME: TODO
 SPACE: TODO
 --------------238: Product of Array Except Self (Medium)--------------
 
 sol1 - Passable solution--------------
-
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         //validity checker
