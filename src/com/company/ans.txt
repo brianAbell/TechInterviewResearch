@@ -385,12 +385,7 @@ NOTE: Three approaches, recursive DFS, iterative DFS or BFS. DFS is more common 
  * }
  */
 
-TODO sol1 - Brute Force--------------
-
-TIME: TODO
-SPACE: TODO
-
-TODO sol2 - DFS - recursive solution--------------
+sol1a - DFS recursive--------------
 class Solution {
     public int maxDepth(TreeNode root) {
         //base case
@@ -405,6 +400,19 @@ class Solution {
 }
 TIME: O(n)
 SPACE: O(n)
+
+sol1b - DFS recursive simplified--------------
+class Solution {
+    public int maxDepth(TreeNode root) {
+            if(root==null){
+                return 0;
+            }
+            return 1+Math.max(maxDepth(root.left),maxDepth(root.right));
+    }
+}
+
+sol2 - BFS iterative-----------------
+
 
 
 _____________________________________________________________________
