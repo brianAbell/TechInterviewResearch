@@ -187,11 +187,6 @@ class Solution {
 }
 TIME: TODO
 SPACE: TODO
-
-TODO sol3 - Passable solution--------------
-
-TIME: TODO
-SPACE: TODO
 --------------238: Product of Array Except Self (Medium)--------------
 
 sol1 - Passable solution--------------
@@ -367,3 +362,50 @@ TIME: TODO
 SPACE: TODO
 ___________________________________________________________________________________
 ___________________________________________________________________________________
+
+________________________________TREES________________________________
+_____________________________________________________________________
+--------------104: Maximum Depth of Binary Tree (Easy)--------------
+NOTE: Three approaches, recursive DFS, iterative DFS or BFS. DFS is more common and makes more sense for this problem but BFS
+      can be used. It requires use of a queue or a stack.
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+
+TODO sol1 - Brute Force--------------
+
+TIME: TODO
+SPACE: TODO
+
+TODO sol2 - DFS - recursive solution--------------
+class Solution {
+    public int maxDepth(TreeNode root) {
+        //base case
+        if(root == null) {
+            return 0;
+        }
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return Math.max(left, right) + 1;
+    }
+}
+TIME: O(n)
+SPACE: O(n)
+
+
+_____________________________________________________________________
+_____________________________________________________________________
