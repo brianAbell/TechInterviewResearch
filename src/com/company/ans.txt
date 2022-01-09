@@ -455,7 +455,7 @@ SPACE: TODO
 
 --------------100: Same Tree (Easy)--------------
 Note: always think about the base case when using recursion
-sol1 - Recursion--------------
+sol1a - Recursion--------------
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         //base case(s)
@@ -471,7 +471,20 @@ class Solution {
     }
 }
 TIME: O(n) - traversing the entire tree of both p and q so its 2n which is n
+SPACE: O(logn) - best case / O(n) - worst case
+
+sol1b - Recursion simplified--------------
+public boolean isSameTree(TreeNode p, TreeNode q) {
+    if(p == null && q == null) return true;
+    if(p == null || q == null) return false;
+    if(p.val == q.val)
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    return false;
+}
+TIME: TODO
 SPACE: TODO
+
+--------------226: Invert Binary Tree (Easy)--------------
 
 _____________________________________________________________________
 _____________________________________________________________________
