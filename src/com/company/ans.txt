@@ -365,6 +365,8 @@ ________________________________________________________________________________
 
 ________________________________TREES________________________________
 _____________________________________________________________________
+NOTE:Tree problems can be solved either recursively or iterativelly. Recursion makes more sense because it is way less code and is generally simplier.
+
 --------------104: Maximum Depth of Binary Tree (Easy)--------------
 NOTE: Three approaches, recursive DFS, iterative DFS or BFS. DFS is more common and makes more sense for this problem but BFS
       can be used. It requires use of a queue or a stack.
@@ -451,6 +453,25 @@ class Solution {
 TIME: TODO
 SPACE: TODO
 
+--------------100: Same Tree (Easy)--------------
+Note: always think about the base case when using recursion
+sol1 - Recursion--------------
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        //base case(s)
+        if(p == null && q == null) { // both null so same
+            return true;
+        } else if(p == null || q == null){ // only 1 null so diff
+            return false;
+        } else if(p.val != q.val) { // different root values
+            return false;
+        } else { //actual recursive calls
+            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+        }
+    }
+}
+TIME: O(n) - traversing the entire tree of both p and q so its 2n which is n
+SPACE: TODO
 
 _____________________________________________________________________
 _____________________________________________________________________
