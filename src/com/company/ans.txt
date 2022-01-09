@@ -485,6 +485,25 @@ TIME: TODO
 SPACE: TODO
 
 --------------226: Invert Binary Tree (Easy)--------------
+sol1a - Recursion--------------
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null) { //base case, invalid root
+            return root;
+        }
 
+        //recursion
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+
+        //the swap
+        root.right = left;
+        root.left = right;
+
+        return root;
+    }
+}
+TIME: TODO
+SPACE: TODO
 _____________________________________________________________________
 _____________________________________________________________________
