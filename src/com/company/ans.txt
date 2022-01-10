@@ -363,6 +363,57 @@ SPACE: TODO
 ___________________________________________________________________________________
 ___________________________________________________________________________________
 
+
+________________________________String________________________________
+______________________________________________________________________
+--------------20: Valid Parentheses (Easy)--------------
+sol1 - --------------
+class Solution {
+    public boolean isValid(String s) {
+       //push starting char onto stack, if not check stack for match
+
+        Stack<Character> stack = new Stack<Character>();
+        //foreach loop
+        for(char c: s.toCharArray()) {
+            //if starting char, push to stack
+            if(c == '(' || c == '[' || c == '{') {
+                stack.push(c);
+            } else if(c == ')' && !stack.isEmpty() && stack.peek() == '(') {
+                stack.pop();
+            } else if(c == ']' && !stack.isEmpty() && stack.peek() == '[') {
+                stack.pop();
+            } else if(c == '}' && !stack.isEmpty() && stack.peek() == '{') {
+                stack.pop();
+            } else {
+                return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+}
+TIME: TODO
+SPACE: TODO
+
+sol1b - Leetcode solution --------------
+public boolean isValid(String s) {
+	Stack<Character> stack = new Stack<Character>();
+	for (char c : s.toCharArray()) {
+		if (c == '(')
+			stack.push(')');
+		else if (c == '{')
+			stack.push('}');
+		else if (c == '[')
+			stack.push(']');
+		else if (stack.isEmpty() || stack.pop() != c)
+			return false;
+	}
+	return stack.isEmpty();
+}
+TIME: TODO
+SPACE: TODO
+_____________________________________________________________________
+_____________________________________________________________________
+
 ________________________________TREES________________________________
 _____________________________________________________________________
 NOTE:Tree problems can be solved either recursively or iterativelly. Recursion makes more sense because it is way less code and is generally simplier.
@@ -505,5 +556,16 @@ class Solution {
 }
 TIME: TODO
 SPACE: TODO
+
+
+--------------572: Subtree of Another Tree (Easy *not really)--------------
+sol1a - Recursion--------------
+
+
+TIME: TODO
+SPACE: TODO
+
+
+
 _____________________________________________________________________
 _____________________________________________________________________
