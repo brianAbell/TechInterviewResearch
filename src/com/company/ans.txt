@@ -424,7 +424,7 @@ class Solution {
         Map<Character, Integer> map = new HashMap<>();
 
         //define windowLen and mostFreq
-        int windowLen = 0, mostFreq = 0;
+        int maxLen = 0, mostFreq = 0;
 
         //find longest repeating character replacement
         while(right < n) {
@@ -437,10 +437,10 @@ class Solution {
                 map.put(arr[left], map.get(arr[left]) - 1);
                 left++;
             }
-            windowLen = Math.max(windowLen, right - left + 1);
+            maxLen = Math.max(maxLen, right - left + 1);
             right++;
         }
-        return windowLen;
+        return maxLen;
     }
 }
 
