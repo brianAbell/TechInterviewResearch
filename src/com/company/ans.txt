@@ -411,6 +411,43 @@ public boolean isValid(String s) {
 }
 TIME: TODO
 SPACE: TODO
+
+
+--------------424: Longest Repeating Character Replacement (Medium)--------------
+sol1 - HashMap, Sliding Window --------------
+class Solution {
+    public int characterReplacement(String s, int k) {
+        char[] arr = s.toCharArray();
+        int left = 0, right = 0, n = arr.length;
+
+        //define table
+        Map<Character, Integer> map = new HashMap<>();
+
+        //define windowLen and mostFreq
+        int windowLen = 0, mostFreq = 0;
+
+        //find longest repeating character replacement
+        while(right < n) {
+            //Expand window
+            map.put(arr[right], map.getOrDefault(arr[right], 0) + 1); //?
+            mostFreq = Math.max(mostFreq, map.get(arr[right]));
+
+            //Shrink the window if we need to replace more than k char
+            if((right - left + 1) - mostFreq > k) {
+                map.put(arr[left], map.get(arr[left]) - 1);
+                left++;
+            }
+            windowLen = Math.max(windowLen, right - left + 1);
+            right++;
+        }
+        return windowLen;
+    }
+}
+
+TIME: O(n) - O(n*26) = O(n)
+SPACE: TODO
+
+
 _____________________________________________________________________
 _____________________________________________________________________
 
