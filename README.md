@@ -1,2 +1,4 @@
 # D-Apractice
-Work towards creating popular Data Structures and Algorithms from scratch in Java
+Practicing Data Structures and Algorithms using Leetcode problems.
+
+>https://seanprashad.com/leetcode-patterns/ 
