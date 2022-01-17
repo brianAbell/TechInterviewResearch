@@ -392,15 +392,38 @@ TIME: O(n)
 SPACE: O(n)
 
 --------------141: Linked List Cycle (Easy)--------------
-sol1 - Brute Force, iterative--------------
+sol1 - HashMap -------------- TODO
 
-TIME: TODO
-SPACE: TODO
+TIME: TODO -
+SPACE: TODO -
 
-sol2 - Recursive--------------
+sol2 - Floyd's Tortoise & Hare Algorithm--------------
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        //if invalid list, then no cycle
+        if(head == null) return false;
 
-TIME: TODO
-SPACE: TODO
+        //create two list nodes which will act as slow and fast pointers respectively
+        ListNode s = head;
+        ListNode f = head;
+
+        //while there are still valid nodes ahead for both s and f to move to...
+        while(f.next != null && f.next.next != null) {
+
+            //we will simply move the pointers to their next nodes
+            s = s.next;
+            f = f.next.next;
+
+            //if our pointers meet at a similar node, then there is a cycle
+            if(s == f) return true;
+        }
+        //if not, there is no cycle
+        return false;
+    }
+}
+
+TIME: O(n) -
+SPACE: O(1) -
 ___________________________________________________________________________________
 ___________________________________________________________________________________
 
