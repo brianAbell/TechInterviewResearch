@@ -187,6 +187,47 @@ class Solution {
 }
 TIME: TODO
 SPACE: TODO
+
+
+--------------268: Missing Number (Easy)--------------
+sol1 - Linear Time solution VERY BAD--------------
+class Solution {
+    public int missingNumber(int[] nums) {
+        //1. create set then fill it with the values
+        HashSet<Integer> set = new HashSet<Integer>();
+        for(int i: nums) {
+            set.add(i);
+        }
+
+        //2. iterate through and compare input vals to set vals. return missing num if found
+        for(int i = 0; i < nums.length; i++) {
+            if(!set.contains(i)) {
+                return i;
+            }
+        }
+        //else return the next num in line
+        return nums.length;
+    }
+}
+TIME: O(n)
+SPACE: O(n)
+
+sol1 - Gausses rule, best solution--------------
+class Solution {
+    public int missingNumber(int[] nums) {
+        int sum = 0;
+        for(int i: nums) {
+            sum += i;
+        }
+
+        int n = nums.length+1;
+        return (n*(n-1)/2) - sum;
+    }
+}
+TIME: O(1)
+SPACE: O(1)
+
+
 --------------238: Product of Array Except Self (Medium)--------------
 
 sol1 - Passable solution--------------
