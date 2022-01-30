@@ -228,12 +228,57 @@ TIME: O(1)
 SPACE: O(1)
 
 
---------------268: Missing Number (Easy)--------------
-sol1 - Hash Set linear solution--------------
+--------------------------------------448: Find All Numbers Disappeared in an Array (Easy)
+sol1 - Using HashSet--------------
+public List<Integer> findDisappearedNumbers(int[] nums) {
 
-TIME: O(1)
-SPACE: O(1)
+    //create list for results
+    List<Integer> result = new ArrayList<Integer>();
+    //create hashSet for reference
+    HashSet<Integer> set = new HashSet<Integer>();
+        //add all values to hashSet
+        for(int num: nums) {
+            set.add(num);
+        }
 
+        //iterate through and if value not in set, add to missing number result list
+        for(int i = 1; i <= nums.length; i++) {
+            if(!set.contains(i)) {
+                result.add(i);
+            }
+        }
+
+        return result;
+    }
+TODO TIME: O(n) - traversal of entire array once
+TODO SPACE: O(n) - all numbers stored in array and hashtable
+
+sol1 - use input array to not use extra memory--------------
+public List<Integer> findDisappearedNumbers(int[] nums) {
+        //create index for checking
+        int index;
+        //iterate through the array
+        for(int i = 0; i < nums.length; i++) {
+            //update index
+            index = Math.abs(nums[i]) - 1;
+            //
+            if(nums[index] > 0) {
+                nums[index] = nums[index] * -1;
+            }
+        }
+
+        List<Integer> result = new ArrayList<Integer>();
+
+        for(int i = 0; i < nums.length; i++) {
+            //
+            if(nums[i] > 0) {
+                result.add(i+1);
+            }
+        }
+        return result;
+    }
+TODO TIME: O(n)
+TODO SPACE: O(1)
 ------------------------------------------------238: Product of Array Except Self (Medium)
 
 sol1 - Passable solution--------------
