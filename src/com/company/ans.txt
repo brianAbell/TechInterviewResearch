@@ -277,8 +277,43 @@ public List<Integer> findDisappearedNumbers(int[] nums) {
         }
         return result;
     }
-TODO TIME: O(n)
-TODO SPACE: O(1)
+TODO TIME: O(n) -
+TODO SPACE: O(1) - No extra space used as we reuse input structure
+
+-----------------------------------------------------------------136: Single Number (Easy)
+sol1 - using HashSet--------------
+public int singleNumber(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+        // loop through input array
+        for(int i = 0; i < nums.length; i++) {
+            //if set contains the arrays current index value
+            if(set.contains(nums[i])) {
+                //remove from the set
+                set.remove(nums[i]);
+            }
+            //add to the set
+            else {
+                set.add(nums[i]);
+            }
+        }
+        //loop through input array
+        for(int i = 0; i< nums.length; i++) {
+            //if set contains the arrays current index value
+            if(set.contains(nums[i])) {
+                // return that index value
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+TODO TIME: O(n^2) -
+TODO SPACE: O(n) -
+
+sol2 - Sorting algorithm--------------
+TODO TIME: O(nlogn) -
+TODO SPACE: O(1) -
+
+
 ------------------------------------------------238: Product of Array Except Self (Medium)
 
 sol1 - Passable solution--------------
