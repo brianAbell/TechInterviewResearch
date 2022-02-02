@@ -281,7 +281,28 @@ TODO TIME: O(n) -
 TODO SPACE: O(1) - No extra space used as we reuse input structure
 
 -----------------------------------------------------------------136: Single Number (Easy)
-sol1 - using HashSet--------------
+sol1a - using HashSet--------------
+public int singleNumber(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+        //check if value is in set or not, only leave singles in set
+        for(int i : nums) {
+            if(set.contains(i)) {
+                set.remove(i);
+            }
+            else {
+                set.add(i);
+            }
+        }
+        //iterate and return all values in set
+        for(int i: set) {
+            return i;
+        }
+        return -1;
+}
+*TODO TIME: O(n^2) -
+*TODO SPACE: O(n) -
+
+sol1b - using HashSet--------------
 public int singleNumber(int[] nums) {
         Set<Integer> set = new HashSet<Integer>();
         // loop through input array
@@ -309,9 +330,18 @@ public int singleNumber(int[] nums) {
 TODO TIME: O(n^2) -
 TODO SPACE: O(n) -
 
-sol2 - Sorting algorithm--------------
-TODO TIME: O(nlogn) -
-TODO SPACE: O(1) -
+sol2 - bitwise--------------
+public int singleNumber(int[] nums) {
+    int ans =0;
+
+    int len = nums.length;
+    for(int i=0;i!=len;i++)
+        ans ^= nums[i];
+
+    return ans;
+}
+TODO TIME: O(?) -
+TODO SPACE: O(?) -
 
 
 ------------------------------------------------238: Product of Array Except Self (Medium)
