@@ -253,7 +253,7 @@ public List<Integer> findDisappearedNumbers(int[] nums) {
 TODO TIME: O(n) - traversal of entire array once
 TODO SPACE: O(n) - all numbers stored in array and hashtable
 
-sol1 - use input array to not use extra memory--------------
+sol2 - use input array to not use extra memory--------------
 public List<Integer> findDisappearedNumbers(int[] nums) {
         //create index for checking
         int index;
