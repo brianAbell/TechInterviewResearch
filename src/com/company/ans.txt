@@ -277,7 +277,7 @@ public List<Integer> findDisappearedNumbers(int[] nums) {
         }
         return result;
     }
-TODO TIME: O(n) -
+TODO TIME: O(n) - Iterate through the array n times
 TODO SPACE: O(1) - No extra space used as we reuse input structure
 
 -----------------------------------------------------------------136: Single Number (Easy)
