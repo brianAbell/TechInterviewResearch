@@ -61,8 +61,8 @@ public class Solution {
         return max;
     }
 }
-TIME: O(n^2)
-SPACE: TODO
+TIME: O(n^2) - nested for loops so nested iterations present
+SPACE: O(1) - only a few variables used to store data
 
 sol3 - Dynamic Programming--------------
 public class Solution {
@@ -81,8 +81,8 @@ public class Solution {
         return max;
     }
 }
-TIME: TODO
-SPACE: TODO
+TIME: O(n) - Single iteration through, utilize max min data
+SPACE: O(1) - only creating a couple variables for storing data.
 
 sol3 - Two pointer efficient--------------
 public class Solution {
@@ -153,20 +153,13 @@ TIME: O(n)
 SPACE: O(n)
 
 ---------------------------------------------------------------53: Maximum Subarray (Easy)
-TODO sol1 - Brute force--------------
+sol1 - Divide and Conquer--------------
 
-for(i=0...n-1)
-    for(j=i...j)
-        for(k=i...j)
-            compute sum
+todo TIME: O(n^2)
+todo SPACE: TODO
 
-TIME: O(n^2)
-SPACE: TODO
+sol3 - Kadane's method--------------
 
-TODO sol3 - Passable solution--------------
-for(i=0...n-1)
-    for(j=i...n-1)
-        currsum + num[j]
 TIME: O(n^2)
 SPACE: TODO
 
@@ -343,6 +336,19 @@ public int singleNumber(int[] nums) {
 TODO TIME: O(?) -
 TODO SPACE: O(?) -
 
+
+
+------------------------------------------------2022: Convert 1D Array into 2D Array (Easy)
+sol1 - todo--------------
+public int[][] construct2DArray(int[] original, int m, int n) {
+	if(original.length != m*n) return new int[0][0];
+	int[][] result = new int[m][n];
+	for(int i=0;i<original.length;i++)
+		result[i/n][i%n] = original[i];
+	return result;
+}
+TODO TIME: O(?) -
+TODO SPACE: O(?) -
 
 ------------------------------------------------238: Product of Array Except Self (Medium)
 
