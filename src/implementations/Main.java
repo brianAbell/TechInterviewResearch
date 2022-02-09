@@ -1,4 +1,4 @@
-package com.company;
+package implementations;
 //import Arrays;
 
 public class Main {

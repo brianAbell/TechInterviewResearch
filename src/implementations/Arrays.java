@@ -1,4 +1,4 @@
-package com.company;
+package implementations;
 
 public class Arrays {
     //int[] scores = {70, 75, 80, 95};
