@@ -908,3 +908,97 @@ SPACE: TODO
 
 _____________________________________________________________________
 _____________________________________________________________________
+
+
+
+
+
+______________________________OTHER__________________________________
+_____________________________________________________________________
+
+-------------------------------------------------------509: Subtree of Another Tree (Easy)
+sol1 - iterative--------------
+public int fib(int n) {
+        if(n <= 1) {return n;}
+
+        int a = 0;
+        int b = 0;
+
+        while(n-- > 1) {
+            int sum = a + b;
+            a = b;
+            b = sum;
+        }
+        return b;
+    }
+todo TIME: O(n) -
+todo SPACE: O(1) -
+
+sol2 - Recursion--------------
+public int fib(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        else {
+            return fib(n-1) + fib(n-2);
+        }
+    }
+todo TIME: O(2^n) - since T(n) = T(n-1) + T(n-2)is an exponential time
+todo SPACE: O(n) - space for recursive function call stack
+
+sol3 - DP (top down approach)--------------
+
+int[] fib_cache = new int[31];
+
+public int fib(int n) {
+    if (n <= 1) {return n;}
+    else if(fib_cache[n] != 0) {return fib_cache[n];}
+    else {return fib_cache[n] = fib(n - 1) + fib(n - 2);}
+}
+todo TIME: O(n) -
+todo SPACE: O(n) -
+
+sol4 - DP (bottom up approach)--------------
+public int fib(int n) {
+    if (n <= 1) {return n;}
+
+    int[] fib_cache = new int[n+1];
+    fib_cache[1] = 1;
+
+    for(int i = 2; i <= n; i++) {
+        fib_cache[i] = fib_cache[i - 1] + fib_cache[i - 2];
+    }
+    return fib_cache[n];
+}
+todo TIME: O(n) -
+todo SPACE: O(n) -
+
+
+
+-------------------------------------------------------1137: N-th Tribonacci Number (easy)
+sol1 - iterative--------------
+public int tribonacci(int n) {
+    if (n < 2) return n;
+    int a = 0, b = 1, c = 1, d;
+    while (n-- > 2) {
+        d = a + b + c;
+        a = b;
+        b = c;
+        c = d;
+    }
+    return c;
+}
+todo TIME: O(n) -
+todo SPACE: O(1) -
+
+sol2 - iterative--------------
+public int tribonacci(int n) {
+        int dp[] = {0, 1, 1};
+        for (int i = 3; i <= n; ++i)
+        dp[i % 3] = dp[0] + dp[1] + dp[2];
+        return dp[n % 3];
+}
+todo TIME: O(n) -
+todo SPACE: O(1) -
+
+
