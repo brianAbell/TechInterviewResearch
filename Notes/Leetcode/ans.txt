@@ -178,8 +178,8 @@ class Solution {
         return max;
     }
 }
-TIME: TODO
-SPACE: TODO
+TIME: O(1)
+SPACE: O(n)
 
 
 ----------------------------------------------------------------268: Missing Number (Easy)
