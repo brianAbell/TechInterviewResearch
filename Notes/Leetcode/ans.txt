@@ -438,8 +438,8 @@ public int climbStairs(int n) {
     }
     return ways;
 }
-TIME: TODO
-SPACE: TODO
+TIME: O(n)
+SPACE: O(1)
 
 sol3 - The Fastest time complexity, using array---------
 public int climbStairs(int n) {
@@ -451,8 +451,8 @@ public int climbStairs(int n) {
         }
         return dp[n];
 }
-TIME: TODO
-SPACE: TODO
+TIME: O(n)
+SPACE: O(n)
 
 
 
