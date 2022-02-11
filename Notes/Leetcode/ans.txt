@@ -153,15 +153,41 @@ TIME: O(n)
 SPACE: O(n)
 
 ---------------------------------------------------------------53: Maximum Subarray (Easy)
-sol1 - Divide and Conquer--------------
+sol1 - Dynamic Programming--------------
+public int maxSubArray(int[] nums) {
+        int currMax = nums[0];
+        int overallMax = nums[0];
 
-todo TIME: O(n^2)
-todo SPACE: TODO
+        for(int i = 1; i < nums.length; i++) {
+            currMax = Math.max(nums[i], currMax + nums[i]);
+            overallMax = Math.max(overallMax, currMax);
+        }
+        return overallMax;
+}
+todo TIME: O(n^2) -
+todo SPACE: O(1) -
 
-sol3 - Kadane's method--------------
+sol2 - Kadane's method--------------
+public int maxSubArray(int[] nums) {
+        int size = nums.length;
+        int currMax = Integer.MIN_VALUE;
+        int maxEndingHere = 0;
 
-TIME: O(n^2)
-SPACE: TODO
+        for(int i = 0; i < size; i++) {
+            maxEndingHere += nums[i];
+
+            if(currMax < maxEndingHere) {
+                currMax = maxEndingHere;
+            }
+
+            if(maxEndingHere < 0) {
+                maxEndingHere = 0;
+            }
+        }
+        return currMax;
+}
+todo TIME: O(n) -
+todo SPACE: O(1) -
 
 sol3 - improved-------------- do we actually have to compute EVERY sub array?
 class Solution {
@@ -178,8 +204,8 @@ class Solution {
         return max;
     }
 }
-TIME: O(1)
-SPACE: O(n)
+todo TIME: O(1) -
+todo SPACE: O(n) -
 
 
 ----------------------------------------------------------------268: Missing Number (Easy)
