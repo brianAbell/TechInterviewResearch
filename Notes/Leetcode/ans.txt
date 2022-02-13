@@ -103,8 +103,8 @@ public class Solution {
         return max;
     }
 }
-TIME: TODO
-SPACE: TODO
+todo TIME:
+todo SPACE:
 
 ------------------------------------------------------------217. Contains Duplicate (Easy)
 
@@ -123,8 +123,8 @@ class Solution {
         return false;
     }
 }
-TIME: O(n^2)
-SPACE: O(1)
+todo TIME: O(n^2) -
+todo SPACE: O(1) -
 
 sol2 - Slightly better--------------
 class Solution {
@@ -136,8 +136,8 @@ class Solution {
     }
     return false;
 }
-TIME: O(nlogn)
-SPACE: O(1)
+todo TIME: O(nlogn) -
+todo SPACE: O(1) -
 
 sol3 - Hashsets--------------
 class Solution {
@@ -149,8 +149,8 @@ class Solution {
 		 return false;
 	 }
 }
-TIME: O(n)
-SPACE: O(n)
+todo TIME: O(n) -
+todo SPACE: O(n) -
 
 ---------------------------------------------------------------53: Maximum Subarray (Easy)
 sol1 - Dynamic Programming--------------
@@ -464,8 +464,8 @@ public int climbStairs(int n) {
     }
     return ways;
 }
-TIME: O(n)
-SPACE: O(1)
+todo TIME: O(n)
+todo SPACE: O(1)
 
 sol3 - The Fastest time complexity, using array---------
 public int climbStairs(int n) {
@@ -480,6 +480,19 @@ public int climbStairs(int n) {
 TIME: O(n)
 SPACE: O(n)
 
+
+---------------------------------------------------303: Range Sum Query - Immutable (easy)
+sol1 - Dynamic Programming--------------
+
+todo TIME: O(?)
+todo SPACE: O(?)
+
+
+-----------------------------------------------------------------322: Coin Change (Medium)
+sol1 - Dynamic Programming--------------
+
+todo TIME: O(?)
+todo SPACE: O(?)
 
 
 ----------------------------------------------------------------198: House Robber (Medium)
