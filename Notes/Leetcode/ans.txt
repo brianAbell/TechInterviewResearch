@@ -1177,6 +1177,20 @@ public int findShortestSubArray(int[] nums) {
 }
 todo TIME: O(n) - Every loop is through O(n) items with O(1) work inside the for-block
 todo SPACE: O(n) - the space used by left, right, and count
+
+--------------------------------------------------------------724: Find Pivot Index (easy)
+sol1 - Prefix Sum--------------
+public int pivotIndex(int[] nums) {
+        int sum = 0, leftsum = 0;
+        for (int x: nums) sum += x;
+        for (int i = 0; i < nums.length; ++i) {
+            if (leftsum == sum - leftsum - nums[i]) return i;
+            leftsum += nums[i];
+        }
+        return -1;
+}
+todo TIME: O(n) - n is length of nums
+todo SPACE: O(1) - space used by leftsum and S
 ___________________________________________________________________________________
 ___________________________________________________________________________________
 
