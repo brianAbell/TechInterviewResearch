@@ -3,35 +3,45 @@ ______________________________Last 6 months_________________________________
 
 ----------------------------------------------------------------1507: Reformat Date (easy)
 sol1 - HashMap--------------
-private static final Map<String, String> months = getMonths();
-    public String reformatDate(String date) {
-        String[] ss = date.split("\\s+");
-        StringBuilder sb = new StringBuilder();
-        sb.append(ss[2]).append("-");
-        sb.append(months.get(ss[1])).append("-");
-        sb.append(ss[0].length() == 3 ? ("0" + ss[0].substring(0, 1)) : ss[0].substring(0, 2));
-        return sb.toString();
+public String reformatDate(String date) {
+    String[] months = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    Map<String, String> map = new HashMap<>();
+    for (int i = 0; i < months.length; ++i) {
+        map.put(months[i], (i + 1 < 10 ? "0" : "") + (i+1));
     }
-
-    private static Map<String, String> getMonths(){
-        Map<String, String> months = new HashMap<>();
-        months.put("Jan", "01");
-        months.put("Feb", "02");
-        months.put("Mar", "03");
-        months.put("Apr", "04");
-        months.put("May", "05");
-        months.put("Jun", "06");
-        months.put("Jul", "07");
-        months.put("Aug", "08");
-        months.put("Sep", "09");
-        months.put("Oct", "10");
-        months.put("Nov", "11");
-        months.put("Dec", "12");
-        return months;
-    }
+    String[] parts = date.split(" ");
+    String day = (parts[0].length() == 3 ? "0" : "") + parts[0].substring(0, parts[0].length() - 2);
+    return parts[2] + "-" + map.get(parts[1]) + "-" + day;
+}
 todo TIME: O(n) -
 todo SPACE: O(n^2) -
 
+sol1 - Performance-wise switch approach--------------
+ private String getMonth(String s) {
+        switch(s) {
+            case "Jan": return "01";
+            case "Feb": return "02";
+            case "Mar": return "03";
+            case "Apr": return "04";
+            case "May": return "05";
+            case "Jun": return "06";
+            case "Jul": return "07";
+            case "Aug": return "08";
+            case "Sep": return "09";
+            case "Oct": return "10";
+            case "Nov": return "11";
+            default: return "12";
+        }
+    }
+
+    public String reformatDate(String date) {
+        String[] d = date.split(" ");
+        return d[2] + "-" +
+            getMonth(d[1]) + "-" +
+            (d[0].length() == 3 ? "0" + d[0].substring(0, 1) : d[0].substring(0, 2));
+    }
+todo TIME: O(?) -
+todo SPACE: O(?) -
 ------------------------------------------------------------697: Degree of an Array (easy)
 sol1 - Left and Right Index--------------
 public int findShortestSubArray(int[] nums) {
