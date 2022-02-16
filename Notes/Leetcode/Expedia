@@ -185,7 +185,6 @@ TIME: O(n)
 SPACE: O(n)
 
 -------------------------------------------------------------------------1. Two Sum (Easy)
-
 sol1 - Brute Force 2 pointer solution--------------
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -289,6 +288,20 @@ SPACE: TODO
 ----------------------------------------------------316: Remove Duplicate Letters (medium)
 
 -------------------------------------------------------1197: Minimum Knight Moves (medium)
+sol1 - BFS--------------
+
+todo TIME: O(?)
+todo SPACE: O(?)
+
+sol2 - Bidirectional BFS--------------
+
+todo TIME: O(?)
+todo SPACE: O(?)
+
+sol3 - DFS w/ memoization--------------
+
+todo TIME: O(?)
+todo SPACE: O(?)
 
 -----------------------------------------------33: Search in Rotated Sorted Array (medium)
 
