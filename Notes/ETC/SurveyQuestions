@@ -1,63 +1,74 @@
-Generic
-What year are you currently in?
-What is your major?
-When did you graduate?
-How many years of experience do you have?
-Where did you go to school?
+/*Generic*/
+[y/n]What year are you currently in?
+[free response?]What is your major?
+[mpc]When did you graduate?
+[mpc]How many years of experience do you have?
+[free response?]Where did you go to school?
 
-Resources
-Have you ever used leetcode?
-Have you ever used the Blind75?
-Have you ever used Sean Prashads list?
-Have you ever used youtube?
-What channels were the most helpful?
-Have you ever used Grokking the Coding Interview?
-Do you pay for any of these services?
-What other resources have you used to prepare for technicals?
 
-Leetcode
-How comfortable are you with leetcode easys?
-How comfortable are you with leetcode medium?
-How comfortable are you with leetcode hard?
-Do you notice patterns between the leetcode problems?
-What is the hardest topic? (data structure, algorithm, pattern, etc)
+/*Resources*/
+[y/n]Have you ever used youtube?
+[free response]What channels were the most helpful?
+    ->could specify some popular channels to
+[y/n]Have you ever used leetcode?
+[y/n]Have you ever used the Blind75?
+[y/n]Have you ever used Sean Prashads list?
+[y/n]Have you ever used Grokking the Coding Interview?
+[y/n]Do you pay for any of these services?
+[free response]What channels were the most helpful?
+[free response]What other resources have you used to prepare for technicals?
 
-Stress
-What stresses you out most about the technical interview preparation?
-Do you feel prepared before technical interviews?
-How would you rate/describe your mental health during interview prep?
-What is your end goal when considering a future career?
-->could either delve into their career choice
-->or could delve into other things like good work-life balance, money, remote work, nice house, etc
 
-Habits
-How many hours do you study a day/week/etc?
-What is your study session designed like?
-  Try the problem by yourself without aid then look at the answer?
-  Try and study the answer to remember?
-Have you done mock interviews?
-   If so, how many?
-Have you sought after one-on-one tutoring for technical prep?
+/*Leetcode*/
+[1-5]How comfortable are you with leetcode easys?
+[1-5]How comfortable are you with leetcode medium?
+[1-5]How comfortable are you with leetcode hard?
+[y/n]Do you notice patterns between the leetcode problems? (ex. DP, Sliding Window, Tortoise and the Hare Algorithm)
+[1-5]What is the hardest topic? (data structure, algorithm, pattern, etc)
 
-School
-Did your undergraduate courses help prepare you?
-If so, what courses?
-If not, what courses would you like to see added?
-How comfortable are you with data structures and algorithms?
 
-Interview
-Are you comfortable with whiteboard interviews?
-Do you prefer remote technicals with the camera off or in person?
-How often do you ask your interviewer questions?
-Has your interviewer helped you when you were stuck?
-Have you ever interviewed at a FAANG company before?
-What concepts are the hardest to prepare for?
+/*Stress*/
+[mpc or free response?]What stresses you out most about the technical interview preparation?
+[1-5 or y/n?]Do you feel prepared before technical interviews?
+[1-5]How would you rate/describe your mental health during interview prep?
+    ->[free response] what do you think has lead to this rating in specific relation to prepping for technicals?
+[mpc]What is your end goal when considering a future career? (career vs. happiness, vs. wl balance)
+        ->could either delve into their career choice
+        ->or could delve into other things like good work-life balance, money, remote work, nice house, etc
 
-Goals -> ?
-Is a FAANG company your goal?
-What specific company are you interested in?
-What sector would you like to work in?
-->tech, gov, finance, etc
+
+/*Habits*/
+[mpc]How many hours do you study a day/week/etc?
+[mpc or free response]What is your study session designed like?
+  ->Try the problem by yourself without aid then look at the answer?
+  ->Try and study the answer to remember?
+[y/n]Have you done mock interviews?
+    [mpc]If so, how many?
+[y/n]Have you sought after one-on-one tutoring for technical prep?
+
+
+/*School*/
+[y/n]Did your undergraduate courses help prepare you?
+[free response / mpc]If so, what courses?
+[free response/ mpc]If not, what courses would you like to see added?
+[1-5]How comfortable are you with data structures and algorithms?
+[y/n]Would you utilize resources offered by the school which were specifically designed to help with technical interview prep?
+       ****MIT supposedly provides this
+
+
+/*Interview*/
+[y/n]Are you comfortable with whiteboard interviews?
+[mpc]Do you prefer remote technicals with the camera off or in person?
+[mpc]How often do you ask your interviewer questions?
+[y/n]Has your interviewer helped you when you were stuck?
+[y/n]Have you ever interviewed at a FAANG company before?
+[free response or mpc]What concepts are the hardest to prepare for?
+
+
+/*Goals -> ?*/
+[y/n]Is a FAANG company your goal?
+[mpc or free response]What specific company are you interested in?
+[mpc]What sector would you like to work in? (tech, gov, finance, etc)
 
 
 
