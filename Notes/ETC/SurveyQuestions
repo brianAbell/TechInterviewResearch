@@ -4,6 +4,8 @@
 [mpc]When did you graduate?
 [mpc]How many years of experience do you have?
 [free response?]Where did you go to school?
+[] gender
+[] race
 
 
 /*Resources*/
@@ -45,7 +47,8 @@
 [y/n]Have you done mock interviews?
     [mpc]If so, how many?
 [y/n]Have you sought after one-on-one tutoring for technical prep?
-
+[y/n] How often do you practice both your technical and behavioural skills?
+[y/n] Do you think aloud while attempting a problem?
 
 /*School*/
 [y/n]Did your undergraduate courses help prepare you?
@@ -66,7 +69,7 @@
 
 
 /*Goals -> ?*/
-[y/n]Is a FAANG company your goal?
+[y/n]Is a FAANG company your goal? !!-rephrase it
 [mpc or free response]What specific company are you interested in?
 [mpc]What sector would you like to work in? (tech, gov, finance, etc)
 
