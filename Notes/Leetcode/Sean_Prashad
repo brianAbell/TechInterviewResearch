@@ -42,6 +42,38 @@ public class Solution {
 }
 todo TIME: O(n) / worst case: O(n+k) -
 todo SPACE: O(1) -
+
+
+-----------------------------------------------------876. Middle of the Linked List (Easy)
+sol1 - Output to Array solution--------------
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        ListNode[] A = new ListNode[100];
+        int t = 0;
+        while (head != null) {
+            A[t++] = head;
+            head = head.next;
+        }
+        return A[t / 2];
+    }
+}
+todo TIME: O(n) - n is number of nodes in the list
+todo SPACE: O(n) - space used by A
+
+sol2 - Fast & Slow pointer solution--------------
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        ListNode[] A = new ListNode[100];
+        int t = 0;
+        while (head != null) {
+            A[t++] = head;
+            head = head.next;
+        }
+        return A[t / 2];
+    }
+}
+todo TIME: O(n) - n is number of nodes in the list
+todo SPACE: O(1) - space used by slow and fast
 ____________________________________________________________________________________
 ____________________________________________________________________________________
 
