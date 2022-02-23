@@ -1,11 +1,12 @@
 /*Generic*/
-[y/n]What year are you currently in?
-[free response?]What is your major?
-[mpc]When did you graduate?
-[mpc]How many years of experience do you have?
-[free response?]Where did you go to school?
-[] gender
-[] race
+Q: Should I include non students?
+[x][y/n]What year are you currently in?
+[x][free response?]What is your major?
+[x][mpc]When did you graduate?
+[][mpc]How many years of experience do you have?
+[][free response?]Where did you go to school?
+[x][] gender
+[x][] race
 
 
 /*Resources*/
