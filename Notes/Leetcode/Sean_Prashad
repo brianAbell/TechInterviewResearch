@@ -1053,8 +1053,8 @@ class Solution {
     }
     return false;
 }
-todo TIME: O(nlogn) -
-todo SPACE: O(1) -
+TIME: O(nlogn) ;
+SPACE: O(1) ;
 
 sol3 - Hashsets--------------
 class Solution {
@@ -1066,8 +1066,8 @@ class Solution {
 		 return false;
 	 }
 }
-todo TIME: O(n) -
-todo SPACE: O(n) -
+TIME: O(n) ;
+SPACE: O(n) ;
 
 ___________________________________BFS______________________________________________
 ____________________________________________________________________________________
@@ -1176,8 +1176,8 @@ public class Solution {
         return false;
     }
 }
-TIME: O(n) - We visit each of the n elements in the list at most once. Adding a node to the hash table costs only O(1) time.
-SPACE: O(n) - he space depends on the number of elements added to the hash table, which contains at most n elements.
+TIME: O(n) ; We visit each of the n elements in the list at most once. Adding a node to the hash table costs only O(1) time.
+SPACE: O(n) ; he space depends on the number of elements added to the hash table, which contains at most n elements.
 
 sol2 - Floyd's Cycle Finding Algorithm solution------------------
 public class Solution {
