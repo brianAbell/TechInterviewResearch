@@ -1,80 +1,80 @@
 /*Generic*/
 Q: Should I include non students?
-[x][y/n]What year are you currently in?
-[x][free response?]What is your major?
-[x][mpc]When did you graduate?
-[][mpc]How many years of experience do you have?
-[][free response?]Where did you go to school?
-[x][] gender
-[x][] race
+[x] [y/n]What year are you currently in?
+[x] [free response?]What is your major?
+[x] [mpc]When did you graduate?
+[x] [mpc]How many years of experience do you have?
+[x] [free response?]Where did you go to school?
+[x] [] gender
+[x] [] race
 
+/*Interview*/
+[x] [y/n]Are you comfortable with whiteboard interviews?
+[x] [mpc]Do you prefer remote technicals with the camera off or in person?
+*[x] [mpc]How often do you ask your interviewer questions? (or comfortable)
+[x] [y/n]Has your interviewer helped you when you were stuck?
+?[] [free response or mpc]What concepts are the hardest to prepare for?
+
+/*Habits*/
+[x] [mpc]How many hours do you study a day/week/etc?
+*[x] [mpc or free response]What is your study session designed like?
+  ->Try the problem by yourself without aid then look at the answer?
+  ->Try and study the answer to remember?
+*[x] [y/n]Have you done mock interviews?
+    [mpc]If so, how many?
+[x] [y/n]Have you sought after one-on-one tutoring for technical prep?
+?[x] [y/n] How often do you practice both your technical and behavioural skills?
+?[] [y/n] Do you think aloud while attempting a problem?
 
 /*Resources*/
-[y/n]Have you ever used youtube?
-[free response]What channels were the most helpful?
+---------------grouped together into a check box question----
+?[x] [y/n]Have you ever used youtube?
+?[] [free response]What channels were the most helpful?
     ->could specify some popular channels to
-[y/n]Have you ever used leetcode?
-[y/n]Have you ever used the Blind75?
-[y/n]Have you ever used Sean Prashads list?
-[y/n]Have you ever used Grokking the Coding Interview?
-[y/n]Do you pay for any of these services?
-[free response]What channels were the most helpful?
-[free response]What other resources have you used to prepare for technicals?
-
+[x] [y/n]Have you ever used leetcode?
+[x] [y/n]Have you ever used the Blind75?
+[x] [y/n]Have you ever used Sean Prashads list?
+[x] [y/n]Have you ever used Grokking the Coding Interview?
+--------------------------------------------------------------
+[x] [y/n]Do you pay for any of these services?
+?[] [free response]What channels were the most helpful?
+[x] [free response]What other resources have you used to prepare for technicals?
 
 /*Leetcode*/
-[1-5]How comfortable are you with leetcode easys?
-[1-5]How comfortable are you with leetcode medium?
-[1-5]How comfortable are you with leetcode hard?
-[y/n]Do you notice patterns between the leetcode problems? (ex. DP, Sliding Window, Tortoise and the Hare Algorithm)
-[1-5]What is the hardest topic? (data structure, algorithm, pattern, etc)
+[x] [1-5]How comfortable are you with leetcode easys?
+[x] [1-5]How comfortable are you with leetcode medium?
+[x] [1-5]How comfortable are you with leetcode hard?
+[x] [y/n]Do you notice patterns between the leetcode problems? (ex. DP, Sliding Window, Tortoise and the Hare Algorithm)
+?[] [1-5]What is the hardest topic? (data structure, algorithm, pattern, etc)
 
 
 /*Stress*/
-[mpc or free response?]What stresses you out most about the technical interview preparation?
-[1-5 or y/n?]Do you feel prepared before technical interviews?
-[1-5]How would you rate/describe your mental health during interview prep?
+[x] [mpc or free response?]What stresses you out most about the technical interview preparation?
+[x] [1-5 or y/n?]Do you feel prepared before technical interviews?
+[x] [1-5]How would you rate/describe your mental health during interview prep?
     ->[free response] what do you think has lead to this rating in specific relation to prepping for technicals?
-[mpc]What is your end goal when considering a future career? (career vs. happiness, vs. wl balance)
-        ->could either delve into their career choice
-        ->or could delve into other things like good work-life balance, money, remote work, nice house, etc
-
-
-/*Habits*/
-[mpc]How many hours do you study a day/week/etc?
-[mpc or free response]What is your study session designed like?
-  ->Try the problem by yourself without aid then look at the answer?
-  ->Try and study the answer to remember?
-[y/n]Have you done mock interviews?
-    [mpc]If so, how many?
-[y/n]Have you sought after one-on-one tutoring for technical prep?
-[y/n] How often do you practice both your technical and behavioural skills?
-[y/n] Do you think aloud while attempting a problem?
 
 /*School*/
-[y/n]Did your undergraduate courses help prepare you?
-[free response / mpc]If so, what courses?
-[free response/ mpc]If not, what courses would you like to see added?
-[1-5]How comfortable are you with data structures and algorithms?
-[y/n]Would you utilize resources offered by the school which were specifically designed to help with technical interview prep?
+[x] [y/n]Did your undergraduate courses help prepare you?
+[x] [free response / mpc]If so, what courses?
+[x] [free response/ mpc]If not, what courses would you like to see added?
+[x] [1-5]How comfortable are you with data structures and algorithms?
+--------------------I combined these into a single question-----------
+[x] [free response/ mpc]If not, what courses would you like to see added?
+[] [y/n]Would you utilize resources offered by the school which were specifically designed to help with technical interview prep?
        ****MIT supposedly provides this
-
-
-/*Interview*/
-[y/n]Are you comfortable with whiteboard interviews?
-[mpc]Do you prefer remote technicals with the camera off or in person?
-[mpc]How often do you ask your interviewer questions?
-[y/n]Has your interviewer helped you when you were stuck?
-[y/n]Have you ever interviewed at a FAANG company before?
-[free response or mpc]What concepts are the hardest to prepare for?
-
+----------------------------------------------------------------------
 
 /*Goals -> ?*/
 [y/n]Is a FAANG company your goal? !!-rephrase it
 [mpc or free response]What specific company are you interested in?
 [mpc]What sector would you like to work in? (tech, gov, finance, etc)
+[] [mpc]What is your end goal when considering a future career? (career vs. happiness, vs. wl balance)
+        ->could either delve into their career choice
+        ->or could delve into other things like good work-life balance, money, remote work, nice house, etc
 
 
-
-
-
+Notes:
+- Deleted questions related to FAANG as I do not feel it brought significant value to the data collected
+- Left out goals section as I do not think the data collected would relate closely enough to the research
+- Should all free responses just go to the end?
