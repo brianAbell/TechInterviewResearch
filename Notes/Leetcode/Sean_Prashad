@@ -1369,4 +1369,27 @@ class Solution {
 TIME: O(N): it's a one pass solution.
 SPACE: O(1): it's a constant space solution.
 
+question-------------------------------------83. Remove Duplicates from Sorted List (Easy)
+approach 1: Straight-Forward Approach--------------
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+    // create current listnode for reference
+        ListNode current = head;
+        // loop through entire linked list
+        while (current != null && current.next != null) {
+            if (current.next.val == current.val) {
+                current.next = current.next.next;
+            } else {
+                current = current.next;
+            }
+        }
+    return head;
+    }
+}
+TIME: O(n): Because each node in the list is checked exactly once to determine if it is a
+            duplicate or not, the total run time is linear, where n is the number of nodes
+            in the list.
+SPACE: O(1): No additional space used.
+
+
 
