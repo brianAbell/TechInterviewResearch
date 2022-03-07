@@ -1351,10 +1351,12 @@ approach 1: Sentinel Node--------------
 NOTE: provides the ability to create a temp head/tail for easier deletion of old heads/tail
 class Solution {
   public ListNode removeElements(ListNode head, int val) {
+
     // initiate sentinel node
     ListNode sentinel = new ListNode(0);
     sentinel.next = head;
 
+    // initiate two pointers to keep track off curr and prev
     ListNode prev = sentinel, curr = head;
     while (curr != null) {
       if (curr.val == val) prev.next = curr.next;
