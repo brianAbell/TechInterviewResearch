@@ -1025,7 +1025,7 @@ __________________________________________reorganizing below____________________
 __________________________________ARRAYS____________________________________________
 ____________________________________________________________________________________
 question----------------------------------------------------217. Contains Duplicate (Easy)
-approach 1 - Brute Force - linear search took to long though--------------
+approach 1: Brute Force - linear search took to long though--------------
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         int count = 0;
@@ -1043,7 +1043,7 @@ class Solution {
 TIME: O(n^2) -
 SPACE: O(1) -
 
-approach 2 - Slightly better--------------
+approach 2: Slightly better--------------
 class Solution {
     Arrays.sort(nums);
     for(int i = 1; i < nums.length; i++) {
@@ -1056,7 +1056,7 @@ class Solution {
 TIME: O(nlogn) ;
 SPACE: O(1) ;
 
-approach 3 - Hashsets--------------
+approach 3: Hashsets--------------
 class Solution {
     public  boolean containsDuplicate(int[] nums) {
 		 Set<Integer> set = new HashSet<Integer>();
@@ -1072,107 +1072,107 @@ SPACE: O(n) ;
 ___________________________________BFS______________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ________________________________BACKTRACKING________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ________________________________BINARY SEARCH_______________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ______________________________BIT MANIPULATION______________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ________________________________BUCKET SORT_________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ____________________________________DFS_____________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ___________________________________DESIGN___________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ______________________________DYNAMIC PROGRAMMING___________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ____________________________________GRAPH___________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ___________________________________GREEDY___________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ____________________________________HEAP____________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ________________________IN PLACE REVERSAL OF A LINKED LIST__________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 __________________________________INTERVALS_________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 _________________________________QUICK SELECT_______________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ________________________________SLIDING WINDOW______________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ___________________________________SORTING__________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ________________________________TOPOLOGICAL SORT____________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 _____________________________________TRIE___________________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 __________________________________TWO POINTERS______________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ___________________________________UNION FIND_______________________________________
 ____________________________________________________________________________________
 
-approach 1 - iterative--------------
+approach 1: iterative--------------
 
 ______________________________FAST & SLOW POINTERS__________________________________
 ____________________________________________________________________________________
 question----------------------------------------------------141. Linked List Cycle  (Easy)
-approach 1 - Hash Set solution--------------
+approach 1: Hash Set solution--------------
 public class Answer {
     public boolean hasCycle(ListNode head) {
         Set<ListNode> nodesSeen = new HashSet<>();
@@ -1186,10 +1186,12 @@ public class Answer {
         return false;
     }
 }
-TIME: O(n) ; We visit each of the n elements in the list at most once. Adding a node to the hash table costs only O(1) time.
-SPACE: O(n) ; he space depends on the number of elements added to the hash table, which contains at most n elements.
+TIME: O(n): We visit each of the n elements in the list at most once. Adding a node to
+             the hash table costs only O(1) time.
+SPACE: O(n): The space depends on the number of elements added to the hash table, which
+              contains at most n elements.
 
-approach 2 - Floyd's Cycle Finding Algorithm solution------------------
+approach 2: Floyd's Cycle Finding Algorithm solution------------------
 public class Answer {
     public boolean hasCycle(ListNode head) {
         if (head == null) {
@@ -1208,11 +1210,11 @@ public class Answer {
         return true;
     }
 }
-TIME: O(n) / worst case: O(n+k) -
-SPACE: O(1) -
+TIME: O(n) / worst case: O(n+k):
+SPACE: O(1):
 
 question---------------------------------------------876. Middle of the Linked List (Easy)
-approach 1 - Output to Array solution--------------
+approach 1: Output to Array solution--------------
 class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode[] A = new ListNode[100];
@@ -1224,10 +1226,10 @@ class Solution {
         return A[t / 2];
     }
 }
-TIME: O(n) - n is number of nodes in the list
-SPACE: O(n) - space used by A
+TIME: O(n): n is number of nodes in the list
+SPACE: O(n): space used by A
 
-approach 2 - Fast & Slow pointer solution--------------
+approach 2: Fast & Slow pointer solution--------------
 class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode[] A = new ListNode[100];
@@ -1239,11 +1241,11 @@ class Solution {
         return A[t / 2];
     }
 }
-TIME: O(n) ; n is number of nodes in the list
-SPACE: O(1) ; space used by slow and fast
+TIME: O(n): n is number of nodes in the list
+SPACE: O(1): space used by slow and fast
 
 question------------------------------------------------234. Palindrome Linked List (Easy)
-approach 1 - copy into array list and then use two pointer technique--------------
+approach 1: copy into array list and then use two pointer technique--------------
 public boolean isPalindrome(ListNode head) {
     List<Integer> vals = new ArrayList<>();
 
@@ -1268,10 +1270,10 @@ public boolean isPalindrome(ListNode head) {
     }
     return true;
 }
-TIME: O(2n) = O(n) ; TODO
-SPACE: O(n) ; where n is the number of nodes in the linked list.
+TIME: O(2n) = O(n): TODO
+SPACE: O(n): where n is the number of nodes in the linked list.
 
-approach 2 - recursive (advanced)--------------
+approach 2: recursive (advanced)--------------
 class Answer {
     private ListNode frontPointer;
 
@@ -1289,8 +1291,80 @@ class Answer {
         return recursivelyCheck(head);
     }
 }
-TIME: O(n) ;
-SPACE: O(n) ;
+TIME: O(n):
+SPACE: O(n):
 
+approach 3: Reverse Second Half in-place--------------
+class Solution {
+
+    public boolean isPalindrome(ListNode head) {
+
+        if (head == null) return true;
+
+        // Find the end of first half and reverse second half.
+        ListNode firstHalfEnd = endOfFirstHalf(head);
+        ListNode secondHalfStart = reverseList(firstHalfEnd.next);
+
+        // Check whether or not there is a palindrome.
+        ListNode p1 = head;
+        ListNode p2 = secondHalfStart;
+        boolean result = true;
+        while (result && p2 != null) {
+            if (p1.val != p2.val) result = false;
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+
+        // Restore the list and return the result.
+        firstHalfEnd.next = reverseList(secondHalfStart);
+        return result;
+    }
+
+    // Taken from https://leetcode.com/problems/reverse-linked-list/solution/
+    private ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        return prev;
+    }
+
+    private ListNode endOfFirstHalf(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+}
+TIME: O(n):
+SPACE: O(1):
+
+question-------------------------------------------203. Remove Linked List Elements (Easy)
+approach 1: Sentinel Node--------------
+NOTE: provides the ability to create a temp head/tail for easier deletion of old heads/tail
+class Solution {
+  public ListNode removeElements(ListNode head, int val) {
+    // initiate sentinel node
+    ListNode sentinel = new ListNode(0);
+    sentinel.next = head;
+
+    ListNode prev = sentinel, curr = head;
+    while (curr != null) {
+      if (curr.val == val) prev.next = curr.next;
+      else prev = curr;
+      curr = curr.next;
+    }
+    return sentinel.next;
+  }
+}
+TIME: O(N): it's a one pass solution.
+SPACE: O(1): it's a constant space solution.
 
 
