@@ -1126,9 +1126,36 @@ approach 1: iterative--------------
 
 ________________________IN PLACE REVERSAL OF A LINKED LIST__________________________
 ____________________________________________________________________________________
+question--------------------------------------------------206. Reverse Linked List  (Easy)
+approach 1: Iterative--------------
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode current = head; // current node that we will be processing
+        ListNode previous = null; // previous node that we have processed
+        ListNode next = null; // will be used to temporarily store the next node
 
-approach 1: iterative--------------
-
+        while (current != null) {
+            next = current.next; // temporarily store the next node
+            current.next = previous; // reverse the current node
+            previous = current; // before we move to the next node, point previous to the current node
+            current = next; // move on the next node
+        }
+        // after the loop current will be pointing to 'null' and 'previous' will be the new head
+        return previous;
+    }
+}
+TIME: O(n): Assume that n is the list's length.
+SPACE: O(1): No extra space used.
 __________________________________INTERVALS_________________________________________
 ____________________________________________________________________________________
 
