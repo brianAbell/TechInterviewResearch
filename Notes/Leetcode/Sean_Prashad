@@ -1163,8 +1163,9 @@ class Solution {
         return (left == 0 || right == 0) ? left + right + 1: Math.min(left, right) + 1;
     }
 }
-TIME: O(V):
-SPACE: O(V):
+TIME: O(n): We visit each node exactly once.
+SPACE: O(n) or O(logn): Worst case, tree is completely unbalanced n. Best case, tree is completely
+             balanced (logn)
 
 approach 1: Using BFS--------------
 ___________________________________DESIGN___________________________________________
