@@ -1072,7 +1072,7 @@ SPACE: O(n) ;
 
 ___________________________________BFS______________________________________________
 ____________________________________________________________________________________
-question--------------------------------------637. Average of Levels in BInary Tree (Easy)
+question--------------------------------------637. Average of Levels in Binary Tree (Easy)
 approach 1: Using BFS--------------
 
 /**
@@ -1136,9 +1136,37 @@ approach 1: iterative--------------
 
 ____________________________________DFS_____________________________________________
 ____________________________________________________________________________________
+question------------------------------------------111. Minimum Depth of Binary Tree (Easy)
+approach 1: Using DFS--------------
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int minDepth(TreeNode root) {
+        //base case root
+        if (root == null) return 0;
+        int left = minDepth(root.left);
+        int right = minDepth(root.right);
+        //if true, then left, else right
+        return (left == 0 || right == 0) ? left + right + 1: Math.min(left, right) + 1;
+    }
+}
+TIME: O(V):
+SPACE: O(V):
 
-approach 1: iterative--------------
-
+approach 1: Using BFS--------------
 ___________________________________DESIGN___________________________________________
 ____________________________________________________________________________________
 
