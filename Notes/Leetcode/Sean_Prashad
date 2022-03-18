@@ -1209,6 +1209,23 @@ class Solution {
 TIME: O(n): Each node is visited only once. n number of nodes.
 SPACE: O(n) or O(logn): worst case, unbalanced tree. Best case, balanced tree.
 
+
+question------------------------------------------104. Maximum Depth of Binary Tree (Easy)
+approach 1: Using DFS--------------
+class Solution {
+  public int maxDepth(TreeNode root) {
+    if (root == null) {
+      return 0;
+    } else {
+      int left_height = maxDepth(root.left);
+      int right_height = maxDepth(root.right);
+      return java.lang.Math.max(left_height, right_height) + 1;
+    }
+  }
+}
+TIME: O(n): only go to n nodes 1 time ea.
+SPACE: O(n) or O(logn): worst case, unbalanced tree, best case, balanced tree
+
 ___________________________________DESIGN___________________________________________
 ____________________________________________________________________________________
 
