@@ -1,7 +1,14 @@
 Purpose: Difficulties faced during preparation for technical interviews and what resources are used.
 
-> How can universities supply the resources needed for students to succeed in the preparation for technical interviews?
+1. How can universities supply the knowledge of Data Structures & Algorithms needed for students to succeed in the preparation for technical interviews?
 
-> How would alternative preparation methods benefit/improve upon current methods such as Leetcode?
+2. TODO How would supplemental preparation methods such as Blind75 benefit/improve upon current core methods such as Leetcode?
+	→ Supplement leetcode instead of replace?
+	→ EX: blind75 and Sean Prashads list are underlying patterns found within leetcode problems. They still ARE utilizing leetcode, just in a different way.
 
-> The actual methods used by students (Leetcode focus)
+3. How has leetcode become a fundamental part of the technical interview preparation phase?
+
+4. What are alternative methods of interview preparation that would alleviate some of the stresses associated with the preparation phase of interviews?
+
+5. Would providing a more structured studying pattern alleviate the current stresses of technical interview preparation?
+	→ This is looking to see if structures such as the blind75 are able to help reduce stress in individuals.
