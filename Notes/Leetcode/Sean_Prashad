@@ -1252,6 +1252,57 @@ class Solution {
 }
 TIME: O(n): only iterate through ea node once so n times.
 SPACE: O(n) or O(logn): worst case, unbalanced tree, best case balanced tree
+
+*question------------------------235. Lowest Common Ancestor of a Binary Search Tree (Easy)
+approach 1: Using DFS--------------
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+
+        // Value of current node or parent node.
+        int parentVal = root.val;
+
+        // Value of p
+        int pVal = p.val;
+
+        // Value of q;
+        int qVal = q.val;
+
+        if (pVal > parentVal && qVal > parentVal) {
+            // If both p and q are greater than parent
+            return lowestCommonAncestor(root.right, p, q);
+        } else if (pVal < parentVal && qVal < parentVal) {
+            // If both p and q are lesser than parent
+            return lowestCommonAncestor(root.left, p, q);
+        } else {
+            // We have found the split point, i.e. the LCA node.
+            return root;
+        }
+    }
+}
+TIME: O(n):
+SPACE: O(n):
+
+question----------------------------------------------------226. Invert Binary Tree (Easy)
+approach 1: Using DFS--------------
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        //base case
+        if (root == null) {
+            return null;
+        }
+        //recursively call children of root and do switches on them
+        TreeNode right = invertTree(root.right);
+        TreeNode left = invertTree(root.left);
+        //roots left child is assigned the right
+        root.left = right;
+        //roots right child is assigned the left
+        root.right = left;
+        //return the reversed tree
+        return root;
+    }
+}
+TIME: O(n): ea node only visited once and there are n nodes.
+SPACE: O(n): recursion, O(h)
 ___________________________________DESIGN___________________________________________
 ____________________________________________________________________________________
 
