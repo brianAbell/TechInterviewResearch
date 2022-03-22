@@ -1121,8 +1121,38 @@ approach 1: iterative--------------
 
 ________________________________BINARY SEARCH_______________________________________
 ____________________________________________________________________________________
+question--------------------------------------------------------704. Binary Search  (Easy)
+approach 1: Iterative--------------
+class Solution {
+    public int search(int[] nums, int target) {
+        //step 1: initialize pointers
+        int left = 0;
+        int right = nums.length - 1;
+        int pivot;
 
-approach 1: iterative--------------
+        //step 2: loop through structure
+        while(left <= right) {
+            //pivot points to curr middle index
+            pivot = left + (right - left) / 2;
+
+            //if target found
+            if(nums[pivot] == target) {return pivot;}
+
+            //adjust to left half
+            else if(target < nums[pivot]) {
+                right = pivot - 1;
+            }
+
+            //adjust to right half
+            else {
+                left = pivot + 1;
+            }
+        }
+        return -1;
+    }
+}
+TIME: O(logn): Masters theorem reference.
+SPACE: O(1): No extra space required.
 
 ______________________________BIT MANIPULATION______________________________________
 ____________________________________________________________________________________
