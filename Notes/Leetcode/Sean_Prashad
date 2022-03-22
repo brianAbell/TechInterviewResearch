@@ -1122,7 +1122,7 @@ approach 1: iterative--------------
 ________________________________BINARY SEARCH_______________________________________
 ____________________________________________________________________________________
 question--------------------------------------------------------704. Binary Search  (Easy)
-approach 1: Iterative--------------
+approach 1: binary search--------------
 class Solution {
     public int search(int[] nums, int target) {
         //step 1: initialize pointers
@@ -1154,6 +1154,11 @@ class Solution {
 TIME: O(logn): Masters theorem reference.
 SPACE: O(1): No extra space required.
 
+question-----------------------------744. Find Smallest Letter Greater Than Target  (Easy)
+approach 1: binary search--------------
+
+TIME: O():
+SPACE: O():
 ______________________________BIT MANIPULATION______________________________________
 ____________________________________________________________________________________
 
@@ -1408,9 +1413,17 @@ approach 1: iterative--------------
 
 ___________________________________SORTING__________________________________________
 ____________________________________________________________________________________
-
-approach 1: iterative--------------
-
+question-----------------------------------------------------169. Majority Element  (Easy)
+approach 1: Iterative--------------
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+}
+TIME: O(nlogn): sorting array
+SPACE: O(1) or O(n): sorting nums in place, if not allowed, linear additional time to copy
+                     and sort to new array
 ________________________________TOPOLOGICAL SORT____________________________________
 ____________________________________________________________________________________
 
