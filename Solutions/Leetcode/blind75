@@ -1,6 +1,6 @@
 ___________________________________ARRAY_______________________________________________
 _______________________________________________________________________________________
-Easy | Two Sum----------------------------------------------------------------------------
+Easy | 1. Two Sum----------------------------------------------------------------------------
 approach 1: Brute Force--------------
 Description:    Loop through each element x and find if there is another value
                 that equals to 'target-x'
@@ -48,7 +48,7 @@ TIME: O(n): We traverse the list containing n elements only once. Each loopup in
 SPACE: O(n):    The extra space required depends on the number of items stored in the hash
                 table, which stores at most n elements.
 
-Easy | Best Time to Buy and Sell Stock----------------------------------------------------------------------------
+Easy | 121. Best Time to Buy and Sell Stock----------------------------------------------------------------------------
 approach 1: Brute force--------------
 Description:    We need to find out the maximum difference (which will be the
                 maximum profit) between two numbers in the given array. Also,
