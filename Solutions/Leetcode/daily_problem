@@ -1,0 +1,49 @@
+___________________________________APRIL_______________________________________________
+_______________________________________________________________________________________
+
+Medium | 1721. Swapping Nodes in a Linked List--------------------------------------------
+approach 1: Three Pass Approach--------------
+Description: As explained above, we must implement the algorithm using 3 separate passes.
+
+             Pass 1: Find the length of the Linked List by traversing each node in the
+             list from head node to last node and increment the counter by 1. Let the
+             counter used to find length be listLength.
+
+             Pass 2: Traverse until the kth node from the head node and set the frontNode.
+
+             Pass 3: Traverse until the listLength - k node from the head node and set the
+              endNode.
+
+                    ->  Swap the values of frontNode and endNode using temporary variable
+                        temp.
+
+                    ->  Return the head node.
+
+class Solution {
+    public ListNode swapNodes(ListNode head, int k) {
+        int listLength = 0;
+        ListNode currentNode = head;
+        // find the length of linked list
+        while (currentNode != null) {
+            listLength++;
+            currentNode = currentNode.next;
+        }
+        // set the front node at kth node
+        ListNode frontNode = head;
+        for (int i = 1; i < k; i++) {
+            frontNode = frontNode.next;
+        }
+        //set the end node at (listLength - k)th node
+        ListNode endNode = head;
+        for (int i = 1; i <= listLength - k; i++) {
+            endNode = endNode.next;
+        }
+        // swap the values of front node and end node
+        int temp = frontNode.val;
+        frontNode.val = endNode.val;
+        endNode.val = temp;
+        return head;
+    }
+}
+TIME: O(n): Three iterations over linked list. Refer to page for specifics.
+SPACE: O(1): Using constant extra space for list node pointers.
