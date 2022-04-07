@@ -117,9 +117,40 @@ class Solution {
 }
 TIME: O(n): Only a single pass needed.
 SPACE: O(1): Only two variables are used.
-Easy | Contains Duplicate----------------------------------------------------------------------------
-approach 1: Iterative--------------
+Easy | 217. Contains Duplicate------------------------------------------------------------
+approach 1: Naive Linear Search--------------
+public boolean containsDuplicate(int[] nums) {
+    for (int i = 0; i < nums.length; ++i) {
+        for (int j = 0; j < i; ++j) {
+            if (nums[j] == nums[i]) return true;
+        }
+    }
+    return false;
+}
+// Time Limit Exceeded
 
+approach 2: Sorting--------------
+public boolean containsDuplicate(int[] nums) {
+    Arrays.sort(nums);
+    for (int i = 0; i < nums.length - 1; ++i) {
+        if (nums[i] == nums[i + 1]) return true;
+    }
+    return false;
+}
+TIME: O(nlogn): sort takes nlogn time
+SPACE: O(1): no significant space used
+
+approach 3: Hash Table--------------
+public boolean containsDuplicate(int[] nums) {
+    Set<Integer> set = new HashSet<>(nums.length);
+    for (int x: nums) {
+        if (set.contains(x)) return true;
+        set.add(x);
+    }
+    return false;
+}
+TIME: O(n): search() and insert() used n times w ea operation taking constant time
+SPACE: O(n): hash table created w its contained elements
 Easy | Product of Array Except Self----------------------------------------------------------------------------
 approach 1: Iterative--------------
 
